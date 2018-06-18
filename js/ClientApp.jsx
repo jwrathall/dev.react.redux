@@ -21,6 +21,7 @@ var MyFirstComponent = function () {
     ce('div', null,
       ce(MyTitle, {title: 'House of Cards'}),
       ce(MyTitle, {title: 'Orange is the New Black'}),
+      ce(MyTitle, {title: 'Stranger Things'}),
       ce(MyTitle, {title: 'Stranger Things'})
     )
   );
