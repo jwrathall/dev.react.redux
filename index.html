@@ -11,30 +11,30 @@
     <script src="node_modules/react/dist/react.js"></script>
     <script src="node_modules/react-dom/dist/react-dom.js"></script>
     <script>
-        var ce = React.createElement;
+        // var ce = React.createElement;
 
-        var MyTitle = function(props){
-            return(
-                ce('div',null,
-                    ce('H1',null,props.title)
-                )
-            );
-        };
+        // var MyTitle = function(props){
+        //     return(
+        //         ce('div',null,
+        //             ce('H1',null,props.title)
+        //         )
+        //     );
+        // };
 
-        var MyFirstComponent = function(){
-            return (
-                ce('div',null,
-                    ce(MyTitle,{title:'Pearl Jam'}),
-                    ce(MyTitle,{title:'The Who'}),
-                    ce(MyTitle,{title:'GodSmack'})
-                )
-            );
-        };
+        // var MyFirstComponent = function(){
+        //     return (
+        //         ce('div',null,
+        //             ce(MyTitle,{title:'Pearl Jam'}),
+        //             ce(MyTitle,{title:'The Who'}),
+        //             ce(MyTitle,{title:'GodSmack'})
+        //         )
+        //     );
+        // };
 
-        ReactDOM.render(
-            ce(MyFirstComponent),
-            document.getElementById("app")
-        );
+        // ReactDOM.render(
+        //     ce(MyFirstComponent),
+        //     document.getElementById("app")
+        // );
         // const MyTitle = function(){
         //     return React.createElement('div',null,
         //         React.createElement('H2',null,'My Second Components')
