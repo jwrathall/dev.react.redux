@@ -6,30 +6,12 @@ import React from 'react'
 //only including the render function
 import {render} from 'react-dom'
 
-var ce = React.createElement;
-
-var MyTitle = function (props) {
-  return (
-    ce('div', null,
-      ce('h1', null, props.title)
-    )
+const App = () => (<div className='app'>
+  <div className='landing'>
+    <h1>SVideo</h1>
+    <input type="text" placeholder="search"/>
+    <a href="#">or browse all</a>
+  </div>
+  </div>
   );
-};
-
-var MyFirstComponent = function () {
-  return (
-    ce('div', null,
-      ce(MyTitle, {title: 'House of Cards'}),
-      ce(MyTitle, {title: 'Orange is the New Black'}),
-      ce(MyTitle, {title: 'Stranger Things'}),
-      ce(MyTitle, {title: 'Stranger Things'})
-    )
-  );
-};
-
-ReactDOM.render(
-  ce(MyFirstComponent),
-  document.getElementById("app")
-);
-
-export default MyTitle;
+render(<App />, document.getElementById('app'));
