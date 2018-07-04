@@ -1,17 +1,31 @@
 /* global React ReactDOM */
 
 //including the whole package
-import React from 'react'
+import React from 'react';
 
 //only including the render function
-import {render} from 'react-dom'
+import {render} from 'react-dom';
 
-const App = () => (<div className='app'>
-  <div className='landing'>
-    <h1>SVideo</h1>
-    <input type="text" placeholder="search"/>
-    <a href="#">or browse all</a>
-  </div>
-  </div>
-  );
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
+import Landing from './Landing';
+import Search from './Search';
+
+/*If no matches to router then render this */
+const FourOhFour =()=><h1>404</h1>
+
+const App = () => (
+  <BrowserRouter>
+    <div className="app">
+    <Switch>
+      <Route exact path="/" component={Landing}/>
+      <Route exact path="/search" component={Search}/>
+      <Route component={FourOhFour}/> 
+    </Switch> 
+    </div>
+  </BrowserRouter>
+
+);
+
+
 render(<App />, document.getElementById('app'));
