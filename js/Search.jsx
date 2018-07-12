@@ -24,7 +24,10 @@ class Search extends Component{
         <input type='text' value ={this.state.searchTerm} placeholder='Search' onChange={this.handleSearchChange}/>
       </header> 
       <div>
-        {preload.shows.map(show => <ShowCard key={show.imdbID} {...show} />)} 
+        {preload.shows
+          .filter( show => `${show.title} ${show.description}`.toUpperCase()
+          .indexOf(this.state.searchTerm.toUpperCase()) >=0)
+          .map(show => <ShowCard key={show.imdbID} {...show} />)} 
       </div>
     </div>
   }
