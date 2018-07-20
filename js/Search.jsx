@@ -7,7 +7,7 @@ class Search extends Component{
   constructor(props){
     super(props);
     this.state={
-      searchTerm:'this is a debug statement'
+      searchTerm:''
     }
     //provides the correct context for the state and the change
     this.handleSearchChange = this.handleSearchChange.bind(this);
